@@ -19,10 +19,12 @@ const DevlogSection = ({ title, description, images, reverse }: { title: string,
       <div className="flex-1 w-full flex flex-col gap-6">
         {images.map((src, i) => (
           <div key={i} className="relative w-full rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-neutral-900">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img 
+            <Image 
               src={src} 
               alt={`${title} screenshot ${i + 1}`} 
+              width={1920}
+              height={1080}
+              referrerPolicy="no-referrer"
               className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-700 ease-in-out" 
             />
           </div>
@@ -60,39 +62,39 @@ export default function Home() {
           <DevlogSection 
             title="Command Center"
             description="The core interface features a comprehensive timing tower with sector times, gaps, and intervals. A dynamic track map provides live driver positions, and a multi-window layout allows for a customizable workspace. The addition of a Picture-in-Picture (PiP) live video feed directly on the track map enhances situational awareness."
-            images={["/image.png", "/image (1).png"]}
+            images={["https://i.ibb.co/QF7PJsJy/image.png", "https://i.ibb.co/SDpRHssy/image-1.png"]}
           />
           
           <DevlogSection 
             title="The Timing Tower"
             description="The timing tower is the heart of the dashboard. It details position, driver, tyre compound (with stint age), best and last lap times, and micro-sector progress. Visual indicators highlight personal and overall best sectors, providing an immediate read on pace."
-            images={["/image (2).png", "/image (3).png"]}
+            images={["https://i.ibb.co/RTY4KsDK/image-2.png", "https://i.ibb.co/xt78pKkM/image-3.png"]}
             reverse
           />
 
           <DevlogSection 
             title="Driver Battles"
             description="The Battle widget focuses on on-track fights. It isolates two drivers (e.g., Verstappen vs. Norris), showing live gap comparisons, last lap deltas, and visual representations of who is ahead and closing in, crucial for predicting overtakes."
-            images={["/image (4).png"]}
+            images={["https://i.ibb.co/S4mnPvcv/image-4.png"]}
           />
 
           <DevlogSection 
             title="Telemetry & Conditions"
             description="Dedicated widgets for Flying Laps break down sector-by-sector progress for individual drivers. The Track Status panel provides instant flag state alerts (e.g., CLEAR or YELLOW), while the Weather widget tracks vital conditions like Air/Track Temp, Humidity, and Pressure."
-            images={["/image (5).png"]}
+            images={["https://i.ibb.co/HT1VjTvV/image-5.png"]}
             reverse
           />
 
           <DevlogSection 
             title="Strategic Insights"
             description="The Pit Strategy widget calculates projected pit loss and tracks tyre choices relative to a reference driver. The Tyre Strategy timeline visualizes live stint history for all drivers, making it easy to identify offset strategies and tyre degradation phases across the field."
-            images={["/image (6).png"]}
+            images={["https://i.ibb.co/ZDj2RYd/image-6.png"]}
           />
 
           <DevlogSection 
             title="Race Control & Comms"
             description="The Race Control log streams live FIA messages and flag updates directly to the dashboard. The Team Radio widget captures live audio communications between drivers and the pit wall, complete with playback controls to never miss a critical call."
-            images={["/image (7).png"]}
+            images={["https://i.ibb.co/RG1d4zDZ/image-7.png"]}
             reverse
           />
         </div>
