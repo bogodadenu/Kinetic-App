@@ -1,0 +1,6 @@
+{
+  "name": "Kinetic Devlog",
+  "description": "Development log for the Kinetic F1 Live Dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
